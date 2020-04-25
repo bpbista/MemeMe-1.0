@@ -55,6 +55,8 @@
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>This app need camera to capture picture for meme</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app generates meme image. Do you want to save?</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
