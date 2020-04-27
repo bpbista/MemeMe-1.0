@@ -36,7 +36,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="3dJ-eM-4O1"/>
                                         </constraints>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                     </textField>
                                 </subviews>
@@ -63,7 +63,7 @@
                                     <constraint firstAttribute="height" constant="44" id="jM9-5K-tpF"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Share" id="rNE-Cm-y3G">
+                                    <barButtonItem systemItem="action" id="rNE-Cm-y3G">
                                         <connections>
                                             <action selector="share:" destination="BYZ-38-t0r" id="gkQ-1I-0bZ"/>
                                         </connections>
@@ -116,14 +116,14 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="bottomText" destination="qo4-zj-G5Q" id="sGP-bf-YlX"/>
+                        <outlet property="bottomTextField" destination="qo4-zj-G5Q" id="sGP-bf-YlX"/>
                         <outlet property="bottomToolBar" destination="A09-lq-Clt" id="oVv-0x-bq7"/>
                         <outlet property="cameraButton" destination="pI8-tO-AHl" id="Olc-lo-qzT"/>
                         <outlet property="imagePickerView" destination="xyE-gt-NWk" id="1rP-TZ-6fV"/>
                         <outlet property="messageText" destination="BdZ-X6-roD" id="Dya-gp-cVo"/>
                         <outlet property="scrollview" destination="3OC-Mr-1Rk" id="E1H-1R-yLV"/>
                         <outlet property="shareButton" destination="rNE-Cm-y3G" id="DiU-RQ-XWy"/>
-                        <outlet property="topText" destination="jqs-Q0-AYN" id="CW9-cd-jom"/>
+                        <outlet property="topTextField" destination="jqs-Q0-AYN" id="CW9-cd-jom"/>
                         <outlet property="topToolBar" destination="B6s-nL-k8v" id="g8N-na-0xP"/>
                     </connections>
                 </viewController>
