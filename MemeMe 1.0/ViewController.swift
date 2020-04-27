@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController, UINavigationControllerDelegate {
     
     var origialBottomTextPosition:CGFloat!
-    var meme:Meme!
     
     let topText = "ENTER TOP TEXT"
     let bottomText = "ENTER BOTTOM TEXT"
@@ -20,7 +19,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var imagePickerView: UIImageView!
-    @IBOutlet weak var scrollview:UIScrollView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
@@ -33,7 +31,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupScrollview()
         setupTextField(topTextField, topText)
         setupTextField(bottomTextField, bottomText)
         hideTextFields()
@@ -87,14 +84,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     
     // MARK: Setup Methods
-    
-    func setupScrollview(){
-        scrollview.minimumZoomScale = 0.1
-        scrollview.maximumZoomScale = 4.0
-        scrollview.zoomScale = 1.0
-        scrollview.delegate = self
-        //as? UIScrollViewDelegate
-    }
     
     let attributes: [NSAttributedString.Key: Any] = [
         .font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
@@ -163,7 +152,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     func save() {
         // Create the meme
         let memedImage = generateMemedImage()
-        meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: memedImage)
+       _ = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: memedImage)
     }
     
     
